@@ -1,0 +1,32 @@
+
+version: 2
+
+models:
+  - name: my_first_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+
+  - name: my_second_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+  - name: Badges
+    description: "Badges table"
+    columns:
+      - name: No_of_User
+        tests:
+          - not_null
+  - name: display_name
+    description: "Print the text of questions asked by user whose display name contains the string nau"
+    columns:
+      - name: text
+        tests:
+          - not_null
